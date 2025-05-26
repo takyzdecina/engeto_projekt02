@@ -11,7 +11,7 @@ from random import sample
 def vygeneruje_zadani(pocet_cislic) -> list:
     """generuje hádaný kód o daném počtu unikátních znaků (max 9)"""
 
-    zadani = sample(range(1, 9), pocet_cislic)
+    zadani = sample(range(1, 10), pocet_cislic)
     return zadani
 
 
