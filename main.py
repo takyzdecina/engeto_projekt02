@@ -5,14 +5,20 @@ author: Jakub Šmíd
 email: smidjakub13@gmail.com
 """
 
-from random import sample
+from random import sample, randint
 
 
 def vygeneruje_zadani(pocet_cislic) -> list:
-    """generuje hádaný kód o daném počtu unikátních znaků (max 9)"""
+    """generuje hádaný kód o daném počtu unikátních znaků (max 10)"""
 
-    zadani = sample(range(1, 10), pocet_cislic)
-    return zadani
+    zadani = []
+    prvni_z_cisel = randint(1,9)
+    zbyle_cislice = [x for x in range(0, 10) if x != prvni_z_cisel]
+    dalsi_cisla = sample(zbyle_cislice,pocet_cislic-1)
+    zadani.append(prvni_z_cisel)
+    zadani.extend(dalsi_cisla)
+
+    return (zadani)
 
 
 def vyzada_cisla_uzivatele(pocet_cislic) -> list:
@@ -69,7 +75,7 @@ vytezstvi = False
 pocet_kol = 0
 # neměnné konec
 
-pocet_cislic = 4 # proměnná určující počet číslic v zadání. Max 9.
+pocet_cislic = 4 # proměnná určující počet číslic v zadání. Max 10.
 
 
 print(
