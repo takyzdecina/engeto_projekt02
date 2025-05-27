@@ -30,7 +30,7 @@ def vyzada_cisla_uzivatele(pocet_cislic) -> list:
             set(zadane_cislo)
         ):
             zpracovane_zadane_cislo = [int(i) for i in zadane_cislo]
-            """alternativa, pokud chceme uživateli zadat jako první znak nulu. 
+            """alternativa, pokud chceme uživateli zakázat jako první znak nulu. 
             Vlastně si nejsem jistej, jaký má ta hra pravidla 
             a proč tu nulu na začátku omezujeme."""
             #if int(zadane_cislo) < 1000:
